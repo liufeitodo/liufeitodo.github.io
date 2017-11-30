@@ -251,6 +251,265 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liufeitodo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="破釜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/30/1/" itemprop="url">markdown学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-30T11:36:02+08:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>中文首段缩进 输入法中文圆角2空格</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+      <div>
+      
+      </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liufeitodo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="破釜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/30/1/" itemprop="url">hexo博客托管到Github的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-30T10:20:19+08:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>　　作为刚接触hexo的新手，如果没有教程安装部署是无从下手的，现在往上有很多相关的教程，详简程度也参差不齐。个人建议这篇文章，《GitHub+Hexo 搭建个人网站详细教程》 <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a>  内容详细，时间上也不至于和现在脱节。<br>　　按照教程的操作的同时，自己也不免遇到了很多教程没有提到的问题，需要自己再查找摸索解决问题才行。我这里不再赘述步骤，仅仅写出自己遇到的问题，和相应的解决方法。</p>
+<ol>
+<li>更新博客时，需要生成和部署到git仓库，hexo generate正常， 但 hexo deploy 出现提示</li>
+</ol>
+<p>You have to configure the deployment settings in _config.yml first!</p>
+<p>Example:<br>  deploy:<br>    type: git<br>    repo: <repository url=""><br>    branch: [branch]<br>    message: [message]</repository></p>
+<pre><code>extend_dirs: [extend directory]
+</code></pre><p>For more help, you can check the docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="noopener">http://hexo.io/docs/deployment.html</a><br>INFO  Deploy done: git</p>
+<p>显然是你的_config.yml出现问题，在deploy这里相应的内容检查是不是有问题，尤其要注意在 : 后面要有空格，网上很多人都出现过这样的粗心问题.<br>还有当同时部署到多个仓库，比如github 和coding，如下为例:</p>
+<p> deploy:<br>  type: git<br>  repo:<br>      github: git@github.com:username/username.github.io.git,master<br>      coding: git@git.coding.net:username/username.git,master<br>这里要注意一下：上面这段代码，设置的时候多数填写格式有问题。在repo下面两行用tab键缩进就行。如果还出现问题在repo下面输入法调至英文状态，用空格缩进，方可解决问题。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+      <div>
+      
+      </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/29/1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -325,7 +584,8 @@
             <blockquote>
 <p>快就是慢，慢就是快。</p>
 <hr>
-<h3 id="11-28-19：50-23：00"><a href="#11-28-19：50-23：00" class="headerlink" title="11.28  19：50~23：00"></a>11.28  19：50~23：00</h3></blockquote>
+<p>###11.28  19：50~23：00</p>
+</blockquote>
 <ul>
 <li>github 的简单使用</li>
 <li>github for window 的简单使用<ol>
@@ -340,7 +600,8 @@
 </ol>
 </li>
 </ul>
-<h3 id="11-29-20-30-23-30"><a href="#11-29-20-30-23-30" class="headerlink" title="11.29 20:30~23:30"></a>11.29 20:30~23:30</h3><ul>
+<p>###11.29 20:30~23:30</p>
+<ul>
 <li>jdk 安装 JAVA_HOME path 设置 </li>
 <li>javase 学习 </li>
 </ul>
@@ -348,6 +609,10 @@
 <li>标识符</li>
 <li>基本数据类型</li>
 </ol>
+<p>###11.30</p>
+<ul>
+<li>markdown 语法</li>
+</ul>
 
           
         
@@ -565,7 +830,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
