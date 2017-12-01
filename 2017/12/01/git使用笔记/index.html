@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="作为刚接触hexo的新手，如果没有教程安装部署是无从下手的，现在往上有很多相关的教程，详简程度也参差不齐。个人建议这篇文章，《GitHub+Hexo 搭建个人网站详细教程》 https://zhuanlan.zhihu.com/p/26625249  内容详细，时间上也不至于和现在脱节。　　按照教程的操作的同时，自己也">
+<meta name="description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first comm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客托管到Github的问题">
-<meta property="og:url" content="http://yoursite.com/2017/11/30/1/index.html">
+<meta property="og:title" content="破釜">
+<meta property="og:url" content="http://yoursite.com/2017/12/01/git使用笔记/index.html">
 <meta property="og:site_name" content="破釜">
-<meta property="og:description" content="作为刚接触hexo的新手，如果没有教程安装部署是无从下手的，现在往上有很多相关的教程，详简程度也参差不齐。个人建议这篇文章，《GitHub+Hexo 搭建个人网站详细教程》 https://zhuanlan.zhihu.com/p/26625249  内容详细，时间上也不至于和现在脱节。　　按照教程的操作的同时，自己也不免遇到了很多教程没有提到的问题，需要自己再查找摸索解决问题才行。我这里不再">
-<meta property="og:updated_time" content="2017-11-30T03:30:09.365Z">
+<meta property="og:description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit">
+<meta property="og:updated_time" content="2017-12-01T15:24:22.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客托管到Github的问题">
-<meta name="twitter:description" content="作为刚接触hexo的新手，如果没有教程安装部署是无从下手的，现在往上有很多相关的教程，详简程度也参差不齐。个人建议这篇文章，《GitHub+Hexo 搭建个人网站详细教程》 https://zhuanlan.zhihu.com/p/26625249  内容详细，时间上也不至于和现在脱节。　　按照教程的操作的同时，自己也不免遇到了很多教程没有提到的问题，需要自己再查找摸索解决问题才行。我这里不再">
+<meta name="twitter:title" content="破釜">
+<meta name="twitter:description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/30/1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/01/git使用笔记/"/>
 
 
 
 
 
-  <title>hexo博客托管到Github的问题 | 破釜</title>
+  <title> | 破釜</title>
   
 
 
@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/git使用笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liufeitodo">
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo博客托管到Github的问题</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -280,8 +280,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-30T10:20:19+08:00">
-                2017-11-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T23:24:43+08:00">
+                2017-12-01
               </time>
             
 
@@ -318,16 +318,87 @@
       
 
       
-        <p>　　作为刚接触hexo的新手，如果没有教程安装部署是无从下手的，现在往上有很多相关的教程，详简程度也参差不齐。个人建议这篇文章，《GitHub+Hexo 搭建个人网站详细教程》 <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a>  内容详细，时间上也不至于和现在脱节。<br>　　按照教程的操作的同时，自己也不免遇到了很多教程没有提到的问题，需要自己再查找摸索解决问题才行。我这里不再赘述步骤，仅仅写出自己遇到的问题，和相应的解决方法。</p>
+        <p>###git使用笔记</p>
 <ol>
-<li>更新博客时，需要生成和部署到git仓库，hexo generate正常， 但 hexo deploy 出现提示</li>
+<li><p>查看版本<br>git –version</p>
+</li>
+<li><p>查看状态<br>git status </p>
+</li>
+<li><p>初始化git 仓库 将当前目录初始化成git 仓库<br>git init</p>
+</li>
+<li><p>添加.md文件到仓库  先提交到缓冲区<br>git add a.md</p>
+</li>
+<li><p>提交.md文件到仓库  从缓冲区确认提交<br>git commit -m “first commit”    //first commit 是标记信息</p>
+</li>
+<li><p>查看所有commit 本地上传日志记录<br>git log</p>
+</li>
+<li><p>新建分支  //git init 初始化时即有新建分支会拥有和master一样的内容<br>git branch b1</p>
+</li>
+<li><p>查看分支 显示出的 * 位置 为当前可操作的分支<br>gie branch </p>
+</li>
+<li><p>切换分支  *在此位置<br>git chockout b1  </p>
+</li>
+<li><p>简化：新建并切换分支<br>git chockout -b b2</p>
+</li>
+<li><p>合并分支  在b1分支上改动的项目合并到master分支上<br>//git chockout master<br>git merge b1</p>
+</li>
+<li><p>删除分支<br>git branch -d b1</p>
+</li>
+<li><p>强制删除分支 分支未合并 git branch -d b2 不是删除<br>git branch -D b2</p>
+</li>
+<li><p>新建   查看标签<br>git tag v1.0<br>git tag      //查看</p>
+</li>
+<li><p>生成密匙 SSH key<br>ssh-keygen -t rsa<br>/<em><br>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下
+</em>/</p>
+</li>
+<li><p>SSH key 添加成功后验证<br>ssh -T git@github.com </p>
+</li>
+<li><p>clone 项目到本地<br>git clone git@github.com:liufeitodo/test.git</p>
+</li>
+<li><p>push 将本地项目更新同步到远程仓库<br>git push origin master</p>
+</li>
+<li><p>pull 将远程仓库更新同步到本地仓库  一般在push之前先pull ,不容易冲突<br>git pull origin master </p>
+</li>
+<li><p>提交代码方法：</p>
+</li>
 </ol>
-<p>You have to configure the deployment settings in _config.yml first!</p>
-<p>Example:<br>  deploy:<br>    type: git<br>    repo: <repository url=""><br>    branch: [branch]<br>    message: [message]</repository></p>
-<pre><code>extend_dirs: [extend directory]
-</code></pre><p>For more help, you can check the docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="noopener">http://hexo.io/docs/deployment.html</a><br>INFO  Deploy done: git</p>
-<p>显然是你的_config.yml出现问题，在deploy这里相应的内容检查是不是有问题，尤其要注意在 : 后面要有空格，网上很多人都出现过这样的粗心问题.<br>还有当同时部署到多个仓库，比如github 和coding，如下为例:</p>
-<p> deploy:<br>  type: git<br>  repo:<br>      github: git@github.com:username/username.github.io.git,master<br>      coding: git@git.coding.net:username/username.git,master<br>这里要注意一下：上面这段代码，设置的时候多数填写格式有问题。在repo下面两行用tab键缩进就行。如果还出现问题在repo下面输入法调至英文状态，用空格缩进，方可解决问题。</p>
+<ul>
+<li><p>第一种：1. clone 下 GitHub 上已创建的项目Test 到本地，<br>  git clone git@github.com:liufeitodo/test.git </p>
+<pre><code>2. 在本地修改添加，之后commit再push
+</code></pre><p>  git push origin master</p>
+</li>
+<li><p>第二种：将本地完整的git仓库（test2） 提交GitHub上的项目（test）中</p>
+<ol>
+<li>关联本地项目test2 和Github 上的test项目，切换到test2目录，执行命令：<br>git remote add origin git@github.com:liufei/test.git<br>//git@github.com:liufei/test.git 远程项目的仓库地址</li>
+<li>提交代码 push<br>git push origin master</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li><p>alias 设置快捷命令<br>如： git status  可以简写为  git st<br>修改代码：  git config –global alias.st status<br>修改组合代码：  git config –global alias.psm ‘push origin master’</p>
+</li>
+<li><p>diff 查看改动<br>git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异<br>git diff <branch1>..<branch2> # 在两个分支之间比较<br>git diff –staged   # 比较暂存区和版本库差异</branch2></branch1></p>
+</li>
+</ol>
+<p>23.stash  将没有commit 的内容暂存<br>git stash<br>//意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p>
+<p>//提示暂存区有记录<br>git stash list  </p>
+<p>//将暂存的内容还原<br>git stash apply </p>
+<p>//将最近的一条stash记录删除掉<br>git stash drop </p>
+<p>//将暂存的内容还原并删除stash记录<br>git stash pop<br>来代替 apply 命令，pop 跟 apply 的唯一区别就是 pop 不但会帮你把代码还原，还自动帮你把这条 stash 记录删除，省的自己再 drop 一次了</p>
+<p>//清空所有暂存区的记录，drop 是只删除一条，当然后面可以跟 stash_id 参数来删除指定的某条记录，不跟参数就是删除最近的，而 clear 是清空。<br>git stash clear</p>
+<ol>
+<li>merge &amp; rebase合并<br>将b1 合并到master上<br>merge:强制合并，知道出处<br>git chockout master<br>git merge b1<br>rebase：合并整理有逻辑，不知道出处<br>git chockout master<br>git rebase b1<br>rebase 跟 merge 的区别:<br>可以理解成有两个书架，你需要把两个书架的书整理到一起去，<br>第一种做法是 merge ，比较粗鲁暴力，就直接腾出一块地方把另一个书架的书全部放进去，虽然暴力，但是这种做法你可以知道哪些书是来自另一个书架的；<br>第二种做法就是 rebase ，他会把两个书架的书先进行比较，按照购书的时间来给他重新排序，然后重新放置好，这样做的好处就是合并之后的书架看起来很有逻辑，但是你很难清晰的知道哪些书来自哪个书架的。</li>
+</ol>
+<p>只能说各有好处的，不同的团队根据不同的需要以及不同的习惯来选择就好。</p>
+<ol>
+<li>解决冲突<br>2人分别对相同内容改动，在各自合并时产生冲突，git无法辨别法判断你们两个谁更改的对，但是这个时候他会智能的提示有 conflicts ，<br>需要手动解决这个冲突之后再重新进行一次 commit 提交</li>
+</ol>
+<p>###出现的问题及解决方法</p>
+<ol>
+<li>错误提示：<br>/<em><br>$ git push origin master<br>To git@github.com:liufeitodo/test.git<br>! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:liufeitodo/test.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.
+</em>/</li>
+</ol>
+<p><em>原因</em><br>出现错误的主要原因是github中的README.md文件不在本地代码目录中<br><em>解决</em><br>可以通过如下命令进行代码合并【注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p>
 
       
     </div>
@@ -338,36 +409,6 @@
       <div>
       
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/11/30/1/">hexo博客托管到Github的问题</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 liufeitodo 的个人博客">liufeitodo</a></p>
-  <p><span>发布时间:</span>2017年11月30日 - 10:11</p>
-  <p><span>最后更新:</span>2017年11月30日 - 11:11</p>
-  <p><span>原始链接:</span><a href="/2017/11/30/1/" title="hexo博客托管到Github的问题">http://yoursite.com/2017/11/30/1/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/11/30/1/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    clipboard.on('success', $(function(){
-      $(".fa-clipboard").click(function(){
-        swal({   
-          title: "",   
-          text: '复制成功',   
-          html: false,
-          timer: 500,   
-          showConfirmButton: false
-        });
-      });
-    }));  
-</script>
-
       
       </div>
 
@@ -388,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/29/1/" rel="next" title="随笔">
-                <i class="fa fa-chevron-left"></i> 随笔
+              <a href="/2017/11/30/1/" rel="next" title="markdown学习笔记">
+                <i class="fa fa-chevron-left"></i> markdown学习笔记
               </a>
             
           </div>
@@ -397,10 +438,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/30/1/" rel="prev" title="markdown学习笔记">
-                markdown学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
