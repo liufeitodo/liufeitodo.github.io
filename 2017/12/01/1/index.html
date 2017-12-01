@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/01/1/index.html">
 <meta property="og:site_name" content="破釜">
 <meta property="og:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本地上传">
-<meta property="og:updated_time" content="2017-12-01T15:33:21.033Z">
+<meta property="og:updated_time" content="2017-12-01T15:39:53.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用笔记">
 <meta name="twitter:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本地上传">
@@ -378,8 +378,9 @@
 </li>
 <li><p>diff 查看改动<br>git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异<br>git diff <branch1>..<branch2> # 在两个分支之间比较<br>git diff –staged   # 比较暂存区和版本库差异</branch2></branch1></p>
 </li>
+<li><p>stash  将没有commit 的内容暂存<br>git stash<br>//意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p>
+</li>
 </ol>
-<p>23.stash  将没有commit 的内容暂存<br>git stash<br>//意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p>
 <p>//提示暂存区有记录<br>git stash list  </p>
 <p>//将暂存的内容还原<br>git stash apply </p>
 <p>//将最近的一条stash记录删除掉<br>git stash drop </p>
