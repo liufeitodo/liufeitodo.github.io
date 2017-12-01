@@ -351,10 +351,10 @@
 </li>
 <li><p>新建   查看标签<br>git tag v1.0<br>git tag      //查看</p>
 </li>
-<li><p>生成密匙 SSH key<br>ssh-keygen -t rsa<br>/*<br>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下</p>
+<li><p>生成密匙 SSH key<br>ssh-keygen -t rsa    </p>
+<p>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下</p>
 </li>
 </ol>
-<p>*/</p>
 <ol>
 <li><p>SSH key 添加成功后验证<br>ssh -T git@github.com </p>
 </li>
@@ -404,8 +404,14 @@
 <li>解决冲突<br>2人分别对相同内容改动，在各自合并时产生冲突，git无法辨别法判断你们两个谁更改的对，但是这个时候他会智能的提示有 conflicts ，<br>需要手动解决这个冲突之后再重新进行一次 commit 提交</li>
 </ol>
 <h3 id="出现的问题及解决方法"><a href="#出现的问题及解决方法" class="headerlink" title="出现的问题及解决方法"></a>出现的问题及解决方法</h3><ol>
-<li>错误提示：<br>/<em><br>$ git push origin master<br>To git@github.com:liufeitodo/test.git<br>! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:liufeitodo/test.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.
-</em>/</li>
+<li>错误提示：<br><code>$ git push origin master
+To git@github.com:liufeitodo/test.git
+! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to &#39;git@github.com:liufeitodo/test.git&#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.</code></li>
 </ol>
 <p>原因：<br>出现错误的主要原因是，github中的 README.md 文件不在本地代码目录中。<br>解决方法：<br>可以通过如下命令进行代码合并。[注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p>
 
