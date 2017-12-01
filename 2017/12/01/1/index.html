@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit” ">
+<meta name="description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  会先提交到缓冲区git add a.md  提交 a.md文件到仓库  从缓冲区确认提交git commit -m “first commi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git使用笔记">
 <meta property="og:url" content="http://yoursite.com/2017/12/01/1/index.html">
 <meta property="og:site_name" content="破釜">
-<meta property="og:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本地上传">
-<meta property="og:updated_time" content="2017-12-01T15:39:53.711Z">
+<meta property="og:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  会先提交到缓冲区git add a.md  提交 a.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本">
+<meta property="og:updated_time" content="2017-12-01T15:57:10.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用笔记">
-<meta name="twitter:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本地上传">
+<meta name="twitter:description" content="git使用笔记 查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  会先提交到缓冲区git add a.md  提交 a.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit 本">
 
 
 
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -214,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -278,7 +278,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T23:32:48+08:00">
                 2017-12-01
@@ -318,16 +318,16 @@
       
 
       
-        <h3 id="git使用笔记"><a href="#git使用笔记" class="headerlink" title="git使用笔记"></a>git使用笔记</h3><ol>
+        <h2 id="git使用笔记"><a href="#git使用笔记" class="headerlink" title="git使用笔记"></a>git使用笔记</h2><ol>
 <li><p>查看版本<br>git –version</p>
 </li>
 <li><p>查看状态<br>git status </p>
 </li>
 <li><p>初始化git 仓库 将当前目录初始化成git 仓库<br>git init</p>
 </li>
-<li><p>添加.md文件到仓库  先提交到缓冲区<br>git add a.md</p>
+<li><p>添加.md文件到仓库  会先提交到缓冲区<br>git add a.md</p>
 </li>
-<li><p>提交.md文件到仓库  从缓冲区确认提交<br>git commit -m “first commit”    //first commit 是标记信息</p>
+<li><p>提交 a.md文件到仓库  从缓冲区确认提交<br>git commit -m “first commit”    //first commit 是标记信息</p>
 </li>
 <li><p>查看所有commit 本地上传日志记录<br>git log</p>
 </li>
@@ -347,9 +347,11 @@
 </li>
 <li><p>新建   查看标签<br>git tag v1.0<br>git tag      //查看</p>
 </li>
-<li><p>生成密匙 SSH key<br>ssh-keygen -t rsa<br>/<em><br>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下
-</em>/</p>
+<li><p>生成密匙 SSH key<br>ssh-keygen -t rsa<br>/*<br>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下</p>
 </li>
+</ol>
+<p>*/</p>
+<ol>
 <li><p>SSH key 添加成功后验证<br>ssh -T git@github.com </p>
 </li>
 <li><p>clone 项目到本地<br>git clone git@github.com:liufeitodo/test.git</p>
@@ -362,13 +364,17 @@
 </li>
 </ol>
 <ul>
-<li><p>第一种：1. clone 下 GitHub 上已创建的项目Test 到本地，<br>  git clone git@github.com:liufeitodo/test.git </p>
-<pre><code>2. 在本地修改添加，之后commit再push
-</code></pre><p>  git push origin master</p>
+<li><p>第一种：</p>
+<ol>
+<li><p>clone 下 GitHub 上已创建的项目Test 到本地，<br>git clone git@github.com:liufeitodo/test.git </p>
+</li>
+<li><p>在本地修改添加，之后commit再push<br>git push origin master</p>
+</li>
+</ol>
 </li>
 <li><p>第二种：将本地完整的git仓库（test2） 提交GitHub上的项目（test）中</p>
 <ol>
-<li>关联本地项目test2 和Github 上的test项目，切换到test2目录，执行命令：<br>git remote add origin git@github.com:liufei/test.git<br>//git@github.com:liufei/test.git 远程项目的仓库地址</li>
+<li>关联本地项目test2 和Github 上的test项目，切换到test2目录，执行命令：<br>git remote add origin git@github.com:liufei/test.git  // git@github.com:liufei/test.git 远程项目的仓库地址</li>
 <li>提交代码 push<br>git push origin master</li>
 </ol>
 </li>
@@ -378,7 +384,7 @@
 </li>
 <li><p>diff 查看改动<br>git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异<br>git diff <branch1>..<branch2> # 在两个分支之间比较<br>git diff –staged   # 比较暂存区和版本库差异</branch2></branch1></p>
 </li>
-<li><p>stash  将没有commit 的内容暂存<br>git stash<br>//意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p>
+<li><p>stash  将没有commit 的内容暂存<br>git stash<br>// 意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p>
 </li>
 </ol>
 <p>//提示暂存区有记录<br>git stash list  </p>
@@ -387,7 +393,7 @@
 <p>//将暂存的内容还原并删除stash记录<br>git stash pop<br>来代替 apply 命令，pop 跟 apply 的唯一区别就是 pop 不但会帮你把代码还原，还自动帮你把这条 stash 记录删除，省的自己再 drop 一次了</p>
 <p>//清空所有暂存区的记录，drop 是只删除一条，当然后面可以跟 stash_id 参数来删除指定的某条记录，不跟参数就是删除最近的，而 clear 是清空。<br>git stash clear</p>
 <ol>
-<li>merge &amp; rebase合并<br>将b1 合并到master上<br>merge:强制合并，知道出处<br>git chockout master<br>git merge b1<br>rebase：合并整理有逻辑，不知道出处<br>git chockout master<br>git rebase b1<br>rebase 跟 merge 的区别:<br>可以理解成有两个书架，你需要把两个书架的书整理到一起去，<br>第一种做法是 merge ，比较粗鲁暴力，就直接腾出一块地方把另一个书架的书全部放进去，虽然暴力，但是这种做法你可以知道哪些书是来自另一个书架的；<br>第二种做法就是 rebase ，他会把两个书架的书先进行比较，按照购书的时间来给他重新排序，然后重新放置好，这样做的好处就是合并之后的书架看起来很有逻辑，但是你很难清晰的知道哪些书来自哪个书架的。</li>
+<li>merge &amp; rebase合并<br>将b1 合并到master上<br>merge: 强制合并，知道出处<br>git chockout master<br>git merge b1<br>rebase: 合并整理有逻辑，不知道出处<br>git chockout master<br>git rebase b1<br>rebase 跟 merge 的区别:<br>可以理解成有两个书架，你需要把两个书架的书整理到一起去，<br>第一种做法是 merge ，比较粗鲁暴力，就直接腾出一块地方把另一个书架的书全部放进去，虽然暴力，但是这种做法你可以知道哪些书是来自另一个书架的；<br>第二种做法就是 rebase ，他会把两个书架的书先进行比较，按照购书的时间来给他重新排序，然后重新放置好，这样做的好处就是合并之后的书架看起来很有逻辑，但是你很难清晰的知道哪些书来自哪个书架的。</li>
 </ol>
 <p>只能说各有好处的，不同的团队根据不同的需要以及不同的习惯来选择就好。</p>
 <ol>
@@ -397,7 +403,7 @@
 <li>错误提示：<br>/<em><br>$ git push origin master<br>To git@github.com:liufeitodo/test.git<br>! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:liufeitodo/test.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.
 </em>/</li>
 </ol>
-<p><em>原因</em><br>出现错误的主要原因是github中的README.md文件不在本地代码目录中<br><em>解决</em><br>可以通过如下命令进行代码合并【注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p>
+<p>原因：<br>出现错误的主要原因是，github中的 README.md 文件不在本地代码目录中。<br>解决方法：<br>可以通过如下命令进行代码合并。[注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p>
 
       
     </div>
@@ -520,10 +526,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -544,7 +550,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -596,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git使用笔记"><span class="nav-number">1.</span> <span class="nav-text">git使用笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#出现的问题及解决方法"><span class="nav-number">2.</span> <span class="nav-text">出现的问题及解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git使用笔记"><span class="nav-number">1.</span> <span class="nav-text">git使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#出现的问题及解决方法"><span class="nav-number">1.1.</span> <span class="nav-text">出现的问题及解决方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -626,7 +632,7 @@
 </div>
 
 "
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
