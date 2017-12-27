@@ -1,2 +1,860 @@
-<!DOCTYPE html><html class="theme-next pisces use-motion" lang=""><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3"><link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222"><meta name="keywords" content="Hexo, NexT"><meta name="description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first comm"><meta property="og:type" content="article"><meta property="og:title" content="破釜"><meta property="og:url" content="http://yoursite.com/2017/12/01/git使用笔记/index.html"><meta property="og:site_name" content="破釜"><meta property="og:description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit"><meta property="og:updated_time" content="2017-12-01T15:24:22.450Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="破釜"><meta name="twitter:description" content="###git使用笔记  查看版本git –version  查看状态git status   初始化git 仓库 将当前目录初始化成git 仓库git init  添加.md文件到仓库  先提交到缓冲区git add a.md  提交.md文件到仓库  从缓冲区确认提交git commit -m “first commit”    //first commit 是标记信息  查看所有commit"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"5.1.3",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"Author"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://yoursite.com/2017/12/01/git使用笔记/"><title> | 破釜</title></head><body itemscope itemtype="http://schema.org/WebPage" lang=""><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">破釜</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> Startseite</a></li><li class="menu-item menu-item-write"><a href="/categories/写作" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i><br> 写作</a></li><li class="menu-item menu-item-read"><a href="/categories/阅读" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i><br> 阅读</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> Über</a></li></ul></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/git使用笔记/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="liufeitodo"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="破釜"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">Veröffentlicht am</span> <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T23:24:43+08:00">2017-12-01</time></span></div></header><div class="post-body" itemprop="articleBody"><p>###git使用笔记</p><ol><li><p>查看版本<br>git –version</p></li><li><p>查看状态<br>git status</p></li><li><p>初始化git 仓库 将当前目录初始化成git 仓库<br>git init</p></li><li><p>添加.md文件到仓库 先提交到缓冲区<br>git add a.md</p></li><li><p>提交.md文件到仓库 从缓冲区确认提交<br>git commit -m “first commit” //first commit 是标记信息</p></li><li><p>查看所有commit 本地上传日志记录<br>git log</p></li><li><p>新建分支 //git init 初始化时即有新建分支会拥有和master一样的内容<br>git branch b1</p></li><li><p>查看分支 显示出的 * 位置 为当前可操作的分支<br>gie branch</p></li><li><p>切换分支 *在此位置<br>git chockout b1</p></li><li><p>简化：新建并切换分支<br>git chockout -b b2</p></li><li><p>合并分支 在b1分支上改动的项目合并到master分支上<br>//git chockout master<br>git merge b1</p></li><li><p>删除分支<br>git branch -d b1</p></li><li><p>强制删除分支 分支未合并 git branch -d b2 不是删除<br>git branch -D b2</p></li><li><p>新建 查看标签<br>git tag v1.0<br>git tag //查看</p></li><li><p>生成密匙 SSH key<br>ssh-keygen -t rsa<br>/<em><br>指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>然后就会生成两个文件 id_rsa 和 id_rsa.pub ，<br>而 id_rsa 是密钥，id_rsa.pub 就是公钥。<br>这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，<br>win系统在 /c/Documents and Settings/username/.ssh下</em> /</p></li><li><p>SSH key 添加成功后验证<br>ssh -T git@github.com</p></li><li><p>clone 项目到本地<br>git clone git@github.com:liufeitodo/test.git</p></li><li><p>push 将本地项目更新同步到远程仓库<br>git push origin master</p></li><li><p>pull 将远程仓库更新同步到本地仓库 一般在push之前先pull ,不容易冲突<br>git pull origin master</p></li><li><p>提交代码方法：</p></li></ol><ul><li><p>第一种：1. clone 下 GitHub 上已创建的项目Test 到本地，<br> git clone git@github.com:liufeitodo/test.git</p><pre><code>2. 在本地修改添加，之后commit再push
-</code></pre><p> git push origin master</p></li><li><p>第二种：将本地完整的git仓库（test2） 提交GitHub上的项目（test）中</p><ol><li>关联本地项目test2 和Github 上的test项目，切换到test2目录，执行命令：<br>git remote add origin git@github.com:liufei/test.git<br>//git@github.com:liufei/test.git 远程项目的仓库地址</li><li>提交代码 push<br>git push origin master</li></ol></li></ul><ol><li><p>alias 设置快捷命令<br>如： git status 可以简写为 git st<br>修改代码： git config –global alias.st status<br>修改组合代码： git config –global alias.psm ‘push origin master’</p></li><li><p>diff 查看改动<br>git diff &lt;$id1&gt; &lt;$id2&gt; # 比较两次提交之间的差异<br>git diff<branch1>..<branch2> # 在两个分支之间比较<br>git diff –staged # 比较暂存区和版本库差异</branch2></branch1></p></li></ol><p>23.stash 将没有commit 的内容暂存<br>git stash<br>//意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</p><p>//提示暂存区有记录<br>git stash list</p><p>//将暂存的内容还原<br>git stash apply</p><p>//将最近的一条stash记录删除掉<br>git stash drop</p><p>//将暂存的内容还原并删除stash记录<br>git stash pop<br>来代替 apply 命令，pop 跟 apply 的唯一区别就是 pop 不但会帮你把代码还原，还自动帮你把这条 stash 记录删除，省的自己再 drop 一次了</p><p>//清空所有暂存区的记录，drop 是只删除一条，当然后面可以跟 stash_id 参数来删除指定的某条记录，不跟参数就是删除最近的，而 clear 是清空。<br>git stash clear</p><ol><li>merge &amp; rebase合并<br>将b1 合并到master上<br>merge:强制合并，知道出处<br>git chockout master<br>git merge b1<br>rebase：合并整理有逻辑，不知道出处<br>git chockout master<br>git rebase b1<br>rebase 跟 merge 的区别:<br>可以理解成有两个书架，你需要把两个书架的书整理到一起去，<br>第一种做法是 merge ，比较粗鲁暴力，就直接腾出一块地方把另一个书架的书全部放进去，虽然暴力，但是这种做法你可以知道哪些书是来自另一个书架的；<br>第二种做法就是 rebase ，他会把两个书架的书先进行比较，按照购书的时间来给他重新排序，然后重新放置好，这样做的好处就是合并之后的书架看起来很有逻辑，但是你很难清晰的知道哪些书来自哪个书架的。</li></ol><p>只能说各有好处的，不同的团队根据不同的需要以及不同的习惯来选择就好。</p><ol><li>解决冲突<br>2人分别对相同内容改动，在各自合并时产生冲突，git无法辨别法判断你们两个谁更改的对，但是这个时候他会智能的提示有 conflicts ，<br>需要手动解决这个冲突之后再重新进行一次 commit 提交</li></ol><p>###出现的问题及解决方法</p><ol><li>错误提示：<br>/<em><br>$ git push origin master<br>To git@github.com:liufeitodo/test.git<br>! [rejected] master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:liufeitodo/test.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</em> /</li></ol><p><em>原因</em><br>出现错误的主要原因是github中的README.md文件不在本地代码目录中<br><em>解决</em><br>可以通过如下命令进行代码合并【注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p></div><div></div><footer class="post-footer"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2017/11/30/1/" rel="next" title="markdown学习笔记"><i class="fa fa-chevron-left"></i> markdown学习笔记</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"></div></div></footer></div></article><div class="post-spread"></div></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><section class="site-overview-wrap sidebar-panel sidebar-panel-active"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">liufeitodo</p><p class="site-description motion-element" itemprop="description">晚是全世界的晚，安是你的</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives"><span class="site-state-item-count">5</span> <span class="site-state-item-name">Artikel</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/liufeitodo" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://weibo.com/liufeitodo" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i> 微博</a></span></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">liufeitodo</span></div> "<div class="powered-by">Erstellt mit <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div> <span class="post-meta-divider">|</span><div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div> "</div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script></body></html>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="学习笔记,git,GitHub," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="git学习笔记：基础命令代码，错误提示&amp;解决方法">
+<meta name="keywords" content="学习笔记,git,GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/12/01/git使用笔记/index.html">
+<meta property="og:site_name" content="破釜">
+<meta property="og:description" content="git学习笔记：基础命令代码，错误提示&amp;解决方法">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-27T12:51:00.590Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git学习笔记">
+<meta name="twitter:description" content="git学习笔记：基础命令代码，错误提示&amp;解决方法">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/01/git使用笔记/"/>
+
+
+
+
+
+  <title>git学习笔记 | 破釜</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">破釜</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于作者
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/git使用笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liufeitodo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="破釜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T23:32:48+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/GitHub/" itemprop="url" rel="index">
+                    <span itemprop="name">GitHub</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  git学习笔记：基础命令代码，错误提示&解决方法
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="git学习笔记"><a href="#git学习笔记" class="headerlink" title="git学习笔记"></a>git学习笔记</h2><h3 id="基础命令代码"><a href="#基础命令代码" class="headerlink" title="基础命令代码"></a>基础命令代码</h3><h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><p>git –version</p>
+<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><p>  git status</p>
+<h4 id="初始化git-仓库-将当前目录初始化成git-仓库"><a href="#初始化git-仓库-将当前目录初始化成git-仓库" class="headerlink" title="初始化git 仓库 将当前目录初始化成git 仓库"></a>初始化git 仓库 将当前目录初始化成git 仓库</h4><p>  git init</p>
+<h4 id="添加-md文件到仓库-会先提交到缓冲区"><a href="#添加-md文件到仓库-会先提交到缓冲区" class="headerlink" title="添加.md文件到仓库  会先提交到缓冲区"></a>添加.md文件到仓库  会先提交到缓冲区</h4><p>  git add a.md</p>
+<h4 id="提交-a-md文件到仓库-从缓冲区确认提交"><a href="#提交-a-md文件到仓库-从缓冲区确认提交" class="headerlink" title="提交 a.md文件到仓库  从缓冲区确认提交"></a>提交 a.md文件到仓库  从缓冲区确认提交</h4><p>  git commit -m “first commit”    //first commit 是标记信息</p>
+<h4 id="查看所有commit-本地上传日志记录"><a href="#查看所有commit-本地上传日志记录" class="headerlink" title="查看所有commit 本地上传日志记录"></a>查看所有commit 本地上传日志记录</h4><p>  git log</p>
+<h4 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h4><p>//git init 初始化时即有新建分支会拥有和master一样的内容<br>  git branch b1</p>
+<h4 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h4><p>显示出的 * 位置 为当前可操作的分支<br>  git branch </p>
+<h4 id="切换分支-在此位置"><a href="#切换分支-在此位置" class="headerlink" title="切换分支  *在此位置"></a>切换分支  *在此位置</h4><p>  git chockout b1  </p>
+<h5 id="简化：新建并切换分支"><a href="#简化：新建并切换分支" class="headerlink" title="简化：新建并切换分支"></a>简化：新建并切换分支</h5><p>  git chockout -b b2</p>
+<h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><p>在b1分支上改动的项目合并到master分支上<br>  //git chockout master<br>  git merge b1</p>
+<h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4><p>   git branch -d b1</p>
+<h4 id="强制删除分支-分支未合并-git-branch-d-b2-不是删除"><a href="#强制删除分支-分支未合并-git-branch-d-b2-不是删除" class="headerlink" title="强制删除分支 分支未合并 git branch -d b2 不是删除"></a>强制删除分支 分支未合并 git branch -d b2 不是删除</h4><p>   git branch -D b2</p>
+<h4 id="新建-、-查看标签"><a href="#新建-、-查看标签" class="headerlink" title="新建 、 查看标签"></a>新建 、 查看标签</h4><p>   git tag v1.0<br>   git tag      //查看</p>
+<h4 id="生成密匙-SSH-key"><a href="#生成密匙-SSH-key" class="headerlink" title="生成密匙 SSH key"></a>生成密匙 SSH key</h4><p>   ssh-keygen -t rsa<br>   指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），<br>   然后就会生成两个文件 id_rsa 和 id_rsa.pub ，而 id_rsa 是密钥，id_rsa.pub 就是公钥。这两文件默认分别在如下目录里生成：Linux/Mac 系统 在 ~/.ssh 下，win系统在 /c/Documents and Settings/username/.ssh</p>
+<h4 id="SSH-key-添加成功后验证"><a href="#SSH-key-添加成功后验证" class="headerlink" title="SSH key 添加成功后验证"></a>SSH key 添加成功后验证</h4><p>   ssh -T git@github.com </p>
+<h4 id="clone-项目到本地"><a href="#clone-项目到本地" class="headerlink" title="clone 项目到本地"></a>clone 项目到本地</h4><p>   git clone git@github.com:liufeitodo/test.git</p>
+<h4 id="push-将本地项目更新同步到远程仓库"><a href="#push-将本地项目更新同步到远程仓库" class="headerlink" title="push 将本地项目更新同步到远程仓库"></a>push 将本地项目更新同步到远程仓库</h4><p>   git push origin master</p>
+<h4 id="pull-将远程仓库更新同步到本地仓库-一般在push之前先pull-不容易冲突"><a href="#pull-将远程仓库更新同步到本地仓库-一般在push之前先pull-不容易冲突" class="headerlink" title="pull 将远程仓库更新同步到本地仓库  一般在push之前先pull ,不容易冲突"></a>pull 将远程仓库更新同步到本地仓库  一般在push之前先pull ,不容易冲突</h4><p>   git pull origin master </p>
+<h4 id="提交代码方法："><a href="#提交代码方法：" class="headerlink" title="提交代码方法："></a>提交代码方法：</h4><ul>
+<li><p>第一种：</p>
+<ol>
+<li>clone 下 GitHub 上已创建的项目Test 到本地，<br>git clone git@github.com:liufeitodo/test.git </li>
+<li>在本地修改添加，之后commit再push<br>git push origin master</li>
+</ol>
+</li>
+<li><p>第二种：将本地完整的git仓库（test2） 提交GitHub上的项目（test）中</p>
+<ol>
+<li>关联本地项目test2 和Github 上的test项目，切换到test2目录，执行命令：<br>git remote add origin git@github.com:liufei/test.git  // git@github.com:liufei/test.git 远程项目的仓库地址</li>
+<li>提交代码 push<br>git push origin master</li>
+</ol>
+</li>
+</ul>
+<h4 id="alias-设置快捷命令"><a href="#alias-设置快捷命令" class="headerlink" title="alias 设置快捷命令"></a>alias 设置快捷命令</h4><p>   如： git status  可以简写为  git st<br>   修改代码：  git config –global alias.st status<br>   修改组合代码：  git config –global alias.psm ‘push origin master’</p>
+<h4 id="diff-查看改动"><a href="#diff-查看改动" class="headerlink" title="diff 查看改动"></a>diff 查看改动</h4><p>   git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异<br>   git diff <branch1>..<branch2> # 在两个分支之间比较<br>   git diff –staged   # 比较暂存区和版本库差异</branch2></branch1></p>
+<h4 id="stash-将没有commit-的内容暂存"><a href="#stash-将没有commit-的内容暂存" class="headerlink" title="stash  将没有commit 的内容暂存"></a>stash  将没有commit 的内容暂存</h4><ul>
+<li>git stash<br>意思就是把当前分支所有没有 commit 的代码先暂存起来，这个时候你再执行 git status 你会发现当前分支很干净，几乎看不到任何改动，你的代码改动也看不见了，但其实是暂存起来了</li>
+<li>git stash list<br>提示暂存区有记录</li>
+<li>git stash apply<br>将暂存的内容还原</li>
+<li>git stash drop<br>将最近的一条stash记录删除掉</li>
+<li>git stash pop<br>将暂存的内容还原并删除stash记录<br>代替 apply 命令，pop 跟 apply 的唯一区别就是 pop 不但会帮你把代码还原，还自动帮你把这条 stash 记录删除，省的自己再 drop 一次了</li>
+<li>git stash clear<br>清空所有暂存区的记录，drop 是只删除一条，当然后面可以跟 stash_id 参数来删除指定的某条记录，不跟参数就是删除最近的，而 clear 是清空。</li>
+</ul>
+<h4 id="merge-amp-rebase-合并"><a href="#merge-amp-rebase-合并" class="headerlink" title="merge &amp; rebase 合并"></a>merge &amp; rebase 合并</h4><p>   将b1 合并到master上</p>
+<ul>
+<li>merge: 强制合并，知道出处<br>git chockout master<br>git merge b1 </li>
+<li><p>rebase: 合并整理有逻辑，不知道出处<br>git chockout master<br>git rebase b1</p>
+</li>
+<li><p>rebase 跟 merge 的区别:<br>可以理解成有两个书架，你需要把两个书架的书整理到一起去，<br>第一种做法是 merge ，比较粗鲁暴力，就直接腾出一块地方把另一个书架的书全部放进去，虽然暴力，但是这种做法你可以知道哪些书是来自另一个书架的；<br>第二种做法就是 rebase ，他会把两个书架的书先进行比较，按照购书的时间来给他重新排序，然后重新放置好，这样做的好处就是合并之后的书架看起来很有逻辑，但是你很难清晰的知道哪些书来自哪个书架的。<br>只能说各有好处的，不同的团队根据不同的需要以及不同的习惯来选择就好。</p>
+</li>
+</ul>
+<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><p>   2人分别对相同内容改动，在各自合并时产生冲突，git无法辨别法判断你们两个谁更改的对，但是这个时候他会智能的提示有 conflicts ，需要手动解决这个冲突之后再重新进行一次 commit 提交</p>
+<h3 id="错误提示-amp-解决方法"><a href="#错误提示-amp-解决方法" class="headerlink" title="错误提示&amp;解决方法"></a>错误提示&amp;解决方法</h3><h4 id="本地没有README文件"><a href="#本地没有README文件" class="headerlink" title="本地没有README文件"></a>本地没有README文件</h4><p>错误提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  $ git push origin master</span><br><span class="line">  To git@github.com:liufeitodo/test.git</span><br><span class="line">   ! [rejected]        master -&gt; master (non-fast-forward)</span><br><span class="line">  error: failed to push some refs to &apos;git@github.com:liufeitodo/test.git&apos;</span><br><span class="line">  hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">  hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">  hint: &apos;git pull ...&apos;) before pushing again.</span><br><span class="line">  hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</span><br><span class="line">&lt;code&gt;&lt;pre&gt;</span><br></pre></td></tr></table></figure></p>
+<p>原因：<br>出现错误的主要原因是，github中的 README.md 文件不在本地代码目录中。<br>解决方法：<br>可以通过如下命令进行代码合并。[注：pull=fetch+merge]<br>git pull –rebase origin master<br>执行代码后可以看到本地代码库中多了README.md文件<br>再执行语句 git push -u origin master即可完成代码上传到github</p>
+
+      
+    </div>
+    
+    
+    
+
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/12/01/git使用笔记/">git学习笔记</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 liufeitodo 的个人博客">liufeitodo</a></p>
+  <p><span>发布时间:</span>2017年12月01日 - 23:12</p>
+  <p><span>最后更新:</span>2017年12月27日 - 20:12</p>
+  <p><span>原始链接:</span><a href="/2017/12/01/git使用笔记/" title="git学习笔记">http://yoursite.com/2017/12/01/git使用笔记/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2017/12/01/git使用笔记/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+      </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/30/markdown学习笔记/" rel="next" title="markdown学习笔记">
+                <i class="fa fa-chevron-left"></i> markdown学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">liufeitodo</p>
+              <p class="site-description motion-element" itemprop="description">晚是全世界的晚，安是你的</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/liufeitodo" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/liufeitodo" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git学习笔记"><span class="nav-number">1.</span> <span class="nav-text">git学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础命令代码"><span class="nav-number">1.1.</span> <span class="nav-text">基础命令代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看版本"><span class="nav-number">1.1.1.</span> <span class="nav-text">查看版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看状态"><span class="nav-number">1.1.2.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化git-仓库-将当前目录初始化成git-仓库"><span class="nav-number">1.1.3.</span> <span class="nav-text">初始化git 仓库 将当前目录初始化成git 仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加-md文件到仓库-会先提交到缓冲区"><span class="nav-number">1.1.4.</span> <span class="nav-text">添加.md文件到仓库  会先提交到缓冲区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交-a-md文件到仓库-从缓冲区确认提交"><span class="nav-number">1.1.5.</span> <span class="nav-text">提交 a.md文件到仓库  从缓冲区确认提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看所有commit-本地上传日志记录"><span class="nav-number">1.1.6.</span> <span class="nav-text">查看所有commit 本地上传日志记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建分支"><span class="nav-number">1.1.7.</span> <span class="nav-text">新建分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看分支"><span class="nav-number">1.1.8.</span> <span class="nav-text">查看分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切换分支-在此位置"><span class="nav-number">1.1.9.</span> <span class="nav-text">切换分支  *在此位置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简化：新建并切换分支"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">简化：新建并切换分支</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并分支"><span class="nav-number">1.1.10.</span> <span class="nav-text">合并分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除分支"><span class="nav-number">1.1.11.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制删除分支-分支未合并-git-branch-d-b2-不是删除"><span class="nav-number">1.1.12.</span> <span class="nav-text">强制删除分支 分支未合并 git branch -d b2 不是删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建-、-查看标签"><span class="nav-number">1.1.13.</span> <span class="nav-text">新建 、 查看标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成密匙-SSH-key"><span class="nav-number">1.1.14.</span> <span class="nav-text">生成密匙 SSH key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH-key-添加成功后验证"><span class="nav-number">1.1.15.</span> <span class="nav-text">SSH key 添加成功后验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clone-项目到本地"><span class="nav-number">1.1.16.</span> <span class="nav-text">clone 项目到本地</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#push-将本地项目更新同步到远程仓库"><span class="nav-number">1.1.17.</span> <span class="nav-text">push 将本地项目更新同步到远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pull-将远程仓库更新同步到本地仓库-一般在push之前先pull-不容易冲突"><span class="nav-number">1.1.18.</span> <span class="nav-text">pull 将远程仓库更新同步到本地仓库  一般在push之前先pull ,不容易冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交代码方法："><span class="nav-number">1.1.19.</span> <span class="nav-text">提交代码方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alias-设置快捷命令"><span class="nav-number">1.1.20.</span> <span class="nav-text">alias 设置快捷命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#diff-查看改动"><span class="nav-number">1.1.21.</span> <span class="nav-text">diff 查看改动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stash-将没有commit-的内容暂存"><span class="nav-number">1.1.22.</span> <span class="nav-text">stash  将没有commit 的内容暂存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#merge-amp-rebase-合并"><span class="nav-number">1.1.23.</span> <span class="nav-text">merge & rebase 合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.1.24.</span> <span class="nav-text">解决冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误提示-amp-解决方法"><span class="nav-number">1.2.</span> <span class="nav-text">错误提示&解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地没有README文件"><span class="nav-number">1.2.1.</span> <span class="nav-text">本地没有README文件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liufeitodo</span>
+
+  
+</div>
+
+<!-- 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
