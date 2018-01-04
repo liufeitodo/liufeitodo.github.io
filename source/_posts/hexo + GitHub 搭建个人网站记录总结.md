@@ -83,6 +83,8 @@ Hexo一般部署到github上的文件类型，是转换后的html静态网页，
 
 * 执行 hexo generate -d 生成网站并部署到 Github 上的 master 分支；
 
+  如果在github 博客仓库页面出现 英文显示uglify-js版本过低的的提示， 请在本地仓库中删除 package-lock,json文件。重新提交即可。
+
 当重装系统或者在其他电脑修改博客是操作：
 * 拷贝博客仓库 git clone git@github.com:xxxx/xxxx.github.io.git  ；
 * 在本地拷贝仓库下，git bash 输入指令：npm install hexo , npm install , npm install hexo-deployer-git. 即可；
