@@ -8,25 +8,30 @@ categories: GitHub
 description: git学习笔记：基础命令代码，错误提示&解决方法
 ---
 
-## git学习笔记
+# git学习笔记
 
 
 
-### 基础命令代码
+## 基础命令代码
 #### 查看版本	
-git --version
+  git version
 #### 查看状态
   git status
-#### 初始化git 仓库 将当前目录初始化成git 仓库
-  git init
-#### 添加.md文件到仓库  会先提交到缓冲区
-  git add a.md
-#### 提交 a.md文件到仓库  从缓冲区确认提交
-  git commit -m "first commit"    //first commit 是标记信息
+#### 初始化git仓库 
+  git init  将当前目录初始化成git 仓库
+#### 添加  
+  git add a.md  会先提交到缓冲区
+  git add . ：他会监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。
+  git add -u ：他仅监控已经被add的文件（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
+  git add -A ：是上面两个功能的合集（git add --all的缩写）
+#### 提交 
+  git commit -m "first commit"    从缓冲区确认提交  first commit 是标记信息
 #### 查看所有commit 本地上传日志记录
   git log
+
+### 分支
 #### 新建分支  
-//git init 初始化时即有新建分支会拥有和master一样的内容
+  git init 初始化时即有新建分支b1会拥有和master一样的内容
   git branch b1
 #### 查看分支 
 显示出的 * 位置 为当前可操作的分支
@@ -46,6 +51,7 @@ git --version
 #### 新建 、 查看标签
    git tag v1.0
    git tag      //查看
+
 #### 生成密匙 SSH key 
    ssh-keygen -t rsa    
    指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），
@@ -58,7 +64,8 @@ git --version
    git push origin master
 #### pull 将远程仓库更新同步到本地仓库  一般在push之前先pull ,不容易冲突
    git pull origin master 
-#### 提交代码方法：
+
+### 提交代码方法：
 * 第一种：
   1. clone 下 GitHub 上已创建的项目Test 到本地，
      git clone git@github.com:liufeitodo/test.git 
