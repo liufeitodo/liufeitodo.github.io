@@ -66,12 +66,21 @@ Hexo一般部署到github上的文件类型，是转换后的html静态网页，
 
 具体流程：
 * 在已有的博客仓库中添加分支 “hexo” (随意取名用来存源代码) ；
+
 * 手动将新建的分支 如 hexo 设为默认分支，（仓库中的setting 有相关操作） ；
+
 * 拷贝仓库到本地，git clone git@github.com:xxxx/xxxx.github.io.git  ；
+
 * 在拷贝到本地的文件夹xxxx下 git bash (分支显示为hexo) 依次执行： npm install hexo , hexo init(空的项目拷贝需要用)，npm install ,npm install hexo-deployer-git ；
+
 * 仓库内的全部文件删除，除了.git 文件夹，将你的博客源文件复制粘贴到仓库内；
+
 * 查看修改_config.yml 中的deploy参数，分支应为master;
+
+  （以下步骤就是更新修改博文后提交的步骤流程）
+
 * 依次执行 git add .  , git commit -m "message"  ,  git push origin hexo (提交本地文件到分支hexo);
+
 * 执行 hexo generate -d 生成网站并部署到 Github 上的 master 分支；
 
 当重装系统或者在其他电脑修改博客是操作：
