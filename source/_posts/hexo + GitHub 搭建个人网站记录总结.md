@@ -16,7 +16,7 @@ categories: GitHub
 
 ### 个性化设置备忘
 #### 1. 隐藏网页底部powered by Hexo / 强力驱动
-打开 themes/next/layout/_partials/footer.swig ,  使用 "<!-- --> "隐藏之间的代码即可，或者直接删除。如下：
+打开 themes/next/layout/_partials/footer.swig ,  使用 "< !-- -- > "隐藏之间的代码即可，或者直接删除。如下：
 ```
 <!-- {% if theme.footer.powered %}
   <div class="powered-by">{#
