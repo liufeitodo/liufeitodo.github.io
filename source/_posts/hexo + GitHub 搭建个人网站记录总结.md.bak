@@ -86,7 +86,7 @@ username.github.io仓库下的 master和hexo分支，分别保存静态网页和
 
 2. 执行 hexo generate -d 生成网站并部署到 Github 上的 master 分支；
 
-如果在github博客仓库页面出现英文显示uglify-js版本过低的的提示，在本地仓库中删除 package-lock,json文件。重新提交即可。
+如果在github博客仓库页面出现 英文显示uglify-js版本过低的的提示，在本地仓库中删除 package-lock,json文件。重新提交即可。
 
 ### 重装
 重装系统，其他电脑更新博客:
