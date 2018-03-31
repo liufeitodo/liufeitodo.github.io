@@ -15,8 +15,6 @@ categories: GitHub
 
 **初始化git仓库** 
   git init  将当前目录初始化成git 仓库
- 
-<!--more-->
   
 **添加**  
 * git add a.md  会先提交到缓冲区
@@ -27,6 +25,8 @@ categories: GitHub
 **提交** 
   git commit -m "first commit"    从缓冲区确认提交  first commit 是标记信息
 
+<!--more-->
+  
 **查看所有commit 本地上传日志记录**
   git log
 
